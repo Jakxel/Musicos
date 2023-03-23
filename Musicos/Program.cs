@@ -1,10 +1,10 @@
-﻿class Musico
+﻿abstract class Musico
 {
     public string? Nombre {get; set;}
     public Musico(string n){Nombre = n;}
     public string? Instrumentos {get; set;}
     public void Saludar(){Console.WriteLine($"Hola soy {Nombre}");}
-    public virtual void Tocar(){Console.WriteLine($"{Nombre} tocando su isntrumento");}
+    public /*virtual*/ abstract void Tocar(){Console.WriteLine($"{Nombre} tocando su isntrumento");}
    
 }
  class Bajista : Musico
@@ -19,6 +19,8 @@
             Console.WriteLine($"{Nombre}tocando su {bajo}");
         }
     }
+
+
 class Program
 {
     private static void Main(string[] args)
